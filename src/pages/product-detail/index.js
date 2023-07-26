@@ -7,31 +7,83 @@ import {
   PlusIcon,
 } from "@heroicons/react/24/outline";
 import DetailTab from "@/components/DetailTab";
+import NewArrival from "@/components/NewArrival";
+
+const items = [
+  {
+    brand: "Grande",
+    name: "Blossom Pouch",
+    price: 39.49,
+    img: "/images/img1.png",
+  },
+  {
+    brand: "Grande",
+    name: "Blossom Pouch",
+    price: 39.49,
+    img: "/images/img2.png",
+  },
+  {
+    brand: "Grande",
+    name: "Blossom Pouch",
+    price: 39.49,
+    img: "/images/img3.png",
+  },
+  {
+    brand: "Grande",
+    name: "Blossom Pouch",
+    price: 39.49,
+    img: "/images/img4.png",
+  },
+  {
+    brand: "Grande",
+    name: "Blossom Pouch",
+    price: 39.49,
+    img: "/images/hand1.png",
+  },
+  {
+    brand: "Grande",
+    name: "Blossom Pouch",
+    price: 39.49,
+    img: "/images/hand2.png",
+  },
+  {
+    brand: "Grande",
+    name: "Blossom Pouch",
+    price: 39.49,
+    img: "/images/hand3.png",
+  },
+  {
+    brand: "Grande",
+    name: "Blossom Pouch",
+    price: 39.49,
+    img: "/images/hand4.png",
+  },
+];
 
 export default function index() {
   return (
-    <div className="p-8">
-      <div className="grid grid-cols-2">
-        <div className="col-span-1 flex-col gap-2">
+    <div className="p-8 mt-[3rem]">
+      <div className="grid grid-cols-2 gap-16">
+        <div className="col-span-1 flex-col gap-[5rem]">
           <img
             src="/images/product-image.png"
-            className="h-[500px] w-[600px]"
+            className="h-[600px] w-[600px] mb-[3rem]"
           />
           <img
             src="/images/product-photos.png"
-            className="h-[75px] w-[473px] my-5"
+            className="h-[85px] w-[473px] my-5"
           />
         </div>
         <div className="col-span-1">
-          <div className="text-3xl font-medium ">Coach</div>
+          <div className="text-[2rem] font-medium ">Coach</div>
           <div className="text-lg text-gray-600 font-medium mt-1 ">
             Leather Coach Bag with adjustable starps.
           </div>
-          <div>
+          <div className="py-4">
             <div>
               <img src="/images/ratings.png" className="text-center my-5" />
             </div>
-            <div className="text-3xl font-bold pb-5 border-b border-gray-200">
+            <div className="text-[2rem] font-bold pb-5 border-b border-gray-200">
               $54.90{" "}
             </div>
           </div>
@@ -60,16 +112,28 @@ export default function index() {
             </div>
           </div>
           <div className="flex justify-between items-center gap-8">
-            <button className="bg-blue-950 p-2 w-full gap-2 rounded-md text-white font-medium justify-center  text-sm flex items-center">
+            <button className="bg-blue-950 p-4 w-full gap-2 rounded-md text-white font-medium justify-center  text-sm flex items-center">
               <ShoppingBagIcon className="h-4 w-4" /> Add to bag
             </button>
-            <button className="border-blue-950 border p-2 gap-2 w-full rounded-md text-blue-950 font-medium  justify-center text-sm flex items-center">
+            <button className="border-blue-950 border p-4 gap-2 w-full rounded-md text-blue-950 font-medium  justify-center text-sm flex items-center">
               <HeartIcon className="h-4 w-4" /> Add to wishlist
             </button>
           </div>
         </div>
       </div>
       <DetailTab />
+
+      <div className="p-8 mb-16">
+        <div className="text-3xl font-semibold text-gray-900">
+          Similar Products
+        </div>
+
+        <div className="flex gap-8  justify-center flex-wrap ">
+          {items.map((item) => {
+            return <NewArrival item={item} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 }

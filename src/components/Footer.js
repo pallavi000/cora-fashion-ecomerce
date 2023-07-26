@@ -4,7 +4,7 @@ import { MapPinIcon } from "@heroicons/react/24/outline";
 function Footer() {
   return (
     <div>
-      <div className="grid grid-cols-6 bg-blue-950 px-8 py-16 items-center">
+      <div className="grid grid-cols-6 bg-blue-950 px-16 py-16 items-center">
         <div className="col-span-4 flex  gap-14">
           <div className="flex flex-col gap-2">
             <div className="text-xl text-white  mb-2 ">Shop by Category</div>

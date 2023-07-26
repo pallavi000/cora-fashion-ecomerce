@@ -6,7 +6,7 @@ import Link from "next/link";
 
 function NewArrival({ item }) {
   return (
-    <Link href={"/product-detail"}>
+    <Link href={"/product-detail"} className="mt-14">
       <div className="  gap-2">
         <img
           src={item.img}
